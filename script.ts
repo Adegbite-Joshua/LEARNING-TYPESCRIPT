@@ -66,5 +66,12 @@ const showPeople =():void =>{
     })
 }
 showPeople();
+
+const addPerson =():void =>{
+    let name:string = (<HTMLInputElement>document.getElementById('name')).value
+    let number:string = (<HTMLInputElement>document.getElementById('num')).value
+    peopleArray.push({name, number})
+    showPeople();
+}
 console.log(nameArray);
 // nameArray.push('wertyu')

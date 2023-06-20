@@ -66,5 +66,11 @@ var showPeople = function () {
     });
 };
 showPeople();
+var addPerson = function () {
+    var name = document.getElementById('name').value;
+    var number = document.getElementById('num').value;
+    peopleArray.push({ name: name, number: number });
+    showPeople();
+};
 console.log(nameArray);
 // nameArray.push('wertyu')
