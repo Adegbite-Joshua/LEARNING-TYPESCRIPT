@@ -49,9 +49,22 @@ const addNumbers = ():any =>{
     // console.log(one, two);
     
 }
-let nameArray:object[] = [{namee:'dfff', class:1},{namee:'ehssh', class:2},{namee:'ms,ndj', class:3},{namee:'.dkklkew', class:4} ]
+let nameArray = [{namee:'dfff', class:1},{namee:'ehssh', class:2},{namee:'ms,ndj', class:3},{namee:'.dkklkew', class:4} ]
 // nameArray.map((person)=>{
 //     document.getElementById('nameDisplay').innerHTML += `<p>${person.namee}</p>`
 // })
+let peopleArray= [
+    {name:'Ade', number:'090'},
+    {name:'Kola', number:'070'}
+]
+const showPeople =():void =>{
+    document.getElementById('nameDisplay').innerHTML = ''
+    peopleArray.map(({name, number})=>{
+        document.getElementById('nameDisplay').innerHTML += `
+        <p>The user with name ${name} has number ${number}</p>
+        `
+    })
+}
+showPeople();
 console.log(nameArray);
 // nameArray.push('wertyu')
