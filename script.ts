@@ -60,7 +60,7 @@ let peopleArray= [
 const showPeople =():void =>{
     document.getElementById('nameDisplay').innerHTML = ''
     peopleArray.map(({name, number})=>{
-        document.getElementById('nameDisplay').innerHTML += `
+        (<HTMLDivElement>document.getElementById('nameDisplay')).innerHTML += `
         <p>The user with name ${name} has number ${number}</p>
         `
     })
@@ -75,3 +75,20 @@ const addPerson =():void =>{
 }
 console.log(nameArray);
 // nameArray.push('wertyu')
+
+// $("#imageFile").addEventListener('click', (event) => {})
+
+const selectFile =()=>{
+    let file= (<HTMLInputElement>document.getElementById('imageFile'))
+    let reader = new FileReader();
+    reader.readAsDataURL(file.files[0]);
+    reader.onload = ()=>{
+        console.log(reader.result);
+        (<HTMLImageElement>document.getElementById('imageFile')).style.height = '300px';	
+        (<HTMLImageElement>document.getElementById('imageFile')).style.width = '300px';	
+        (<HTMLImageElement>document.getElementById('imageFile')).src = reader.result as string;
+        
+        // (<HTMLImageElement>document.getElementById('imageFile')).src = reader.result
+    }
+    // (<HTMLImageElement>document.getElementById('imageFile')).src = reader.result as string;
+}

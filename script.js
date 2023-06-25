@@ -74,3 +74,17 @@ var addPerson = function () {
 };
 console.log(nameArray);
 // nameArray.push('wertyu')
+// $("#imageFile").addEventListener('click', (event) => {})
+var selectFile = function () {
+    var file = document.getElementById('imageFile');
+    var reader = new FileReader();
+    reader.readAsDataURL(file.files[0]);
+    reader.onload = function () {
+        console.log(reader.result);
+        document.getElementById('imageFile').style.height = '300px';
+        document.getElementById('imageFile').style.width = '300px';
+        document.getElementById('imageFile').src = reader.result;
+        // (<HTMLImageElement>document.getElementById('imageFile')).src = reader.result
+    };
+    // (<HTMLImageElement>document.getElementById('imageFile')).src = reader.result as string;
+};
