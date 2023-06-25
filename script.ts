@@ -84,11 +84,10 @@ const selectFile =()=>{
     reader.readAsDataURL(file.files[0]);
     reader.onload = ()=>{
         console.log(reader.result);
-        (<HTMLImageElement>document.getElementById('imageFile')).style.height = '300px';	
-        (<HTMLImageElement>document.getElementById('imageFile')).style.width = '300px';	
-        (<HTMLImageElement>document.getElementById('imageFile')).src = reader.result as string;
+        (<HTMLImageElement>document.getElementById('imageElement')).style.height = '300px';	
+        (<HTMLImageElement>document.getElementById('imageElement')).style.width = '300px';	
+        (<HTMLImageElement>document.getElementById('imageElement')).src = reader.result as string;
         
         // (<HTMLImageElement>document.getElementById('imageFile')).src = reader.result
     }
-    // (<HTMLImageElement>document.getElementById('imageFile')).src = reader.result as string;
 }

@@ -81,10 +81,9 @@ var selectFile = function () {
     reader.readAsDataURL(file.files[0]);
     reader.onload = function () {
         console.log(reader.result);
-        document.getElementById('imageFile').style.height = '300px';
-        document.getElementById('imageFile').style.width = '300px';
-        document.getElementById('imageFile').src = reader.result;
+        document.getElementById('imageElement').style.height = '300px';
+        document.getElementById('imageElement').style.width = '300px';
+        document.getElementById('imageElement').src = reader.result;
         // (<HTMLImageElement>document.getElementById('imageFile')).src = reader.result
     };
-    // (<HTMLImageElement>document.getElementById('imageFile')).src = reader.result as string;
 };
